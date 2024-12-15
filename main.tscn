@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://tqnllxqwpra8"]
+
+[ext_resource type="PackedScene" uid="uid://hlvvp0obu6ig" path="res://sprite/sprite_2d.tscn" id="1_83i6k"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_qtokt"]
+[ext_resource type="Script" path="res://Scripts/pc_move.gd" id="2_d4bkq"]
+[ext_resource type="Script" path="res://sprite/sprite_2d.gd" id="3_urfbn"]
+[ext_resource type="Script" path="res://label.gd" id="4_nnb6n"]
+[ext_resource type="PackedScene" uid="uid://blti1vqqay5mn" path="res://mundo_proc.tscn" id="5_c6ibl"]
+
+[node name="Player" type="Node2D"]
+position = Vector2(20, 29)
+script = ExtResource("1_qtokt")
+
+[node name="PCMove" type="Node2D" parent="."]
+script = ExtResource("2_d4bkq")
+
+[node name="Mundo_proc" parent="." instance=ExtResource("5_c6ibl")]
+position = Vector2(-27, -31)
+
+[node name="PC" parent="." instance=ExtResource("1_83i6k")]
+position = Vector2(-19, -34)
+scale = Vector2(1, 1)
+script = ExtResource("3_urfbn")
+
+[node name="Camera2D" type="Camera2D" parent="PC"]
+position = Vector2(1, 0)
+scale = Vector2(1, 0.999605)
+
+[node name="Control" type="Control" parent="PC/Camera2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="PC/Camera2D/Control"]
+
+[node name="Label" type="Label" parent="PC/Camera2D/Control/CanvasLayer"]
+clip_contents = true
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -124.0
+offset_top = 6.0
+offset_right = -7.0
+offset_bottom = 46.0
+grow_horizontal = 0
+text = "Turn: 0"
+horizontal_alignment = 2
+vertical_alignment = 3
+clip_text = true
+uppercase = true
+script = ExtResource("4_nnb6n")
