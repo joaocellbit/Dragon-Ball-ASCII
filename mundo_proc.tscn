@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://blti1vqqay5mn"]
 
-[ext_resource type="Script" path="res://mundo_proc.gd" id="1_qfbwi"]
+[ext_resource type="Script" path="res://Scripts/mundo_proc.gd" id="1_qfbwi"]
 [ext_resource type="Texture2D" uid="uid://5lb4im6uyixj" path="res://resource/curses_vector_16x24.png" id="2_b5tc0"]
 
 [sub_resource type="Gradient" id="Gradient_bowkg"]

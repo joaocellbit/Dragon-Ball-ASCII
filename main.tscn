@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_qtokt"]
 [ext_resource type="Script" path="res://Scripts/pc_move.gd" id="2_d4bkq"]
 [ext_resource type="Script" path="res://sprite/sprite_2d.gd" id="3_urfbn"]
-[ext_resource type="Script" path="res://label.gd" id="4_nnb6n"]
+[ext_resource type="Script" path="res://Scripts/label.gd" id="4_nnb6n"]
 [ext_resource type="PackedScene" uid="uid://blti1vqqay5mn" path="res://mundo_proc.tscn" id="5_c6ibl"]
 
 [node name="Player" type="Node2D"]
