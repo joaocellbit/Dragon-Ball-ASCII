@@ -18,7 +18,7 @@ script = ExtResource("2_d4bkq")
 position = Vector2(-27, -31)
 
 [node name="PC" parent="." instance=ExtResource("1_83i6k")]
-position = Vector2(-19, -34)
+position = Vector2(0, 0)
 scale = Vector2(1, 1)
 script = ExtResource("3_urfbn")
 
