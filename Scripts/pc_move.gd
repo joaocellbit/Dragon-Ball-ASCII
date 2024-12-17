@@ -18,9 +18,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		Global.Rodadas += 1
 		print(Global.Rodadas)
 		var axi = Input.get_axis("ui_left", "ui_right")
-		pc.position.x += axi*30
+		pc.position.x += axi*16
 	elif event.is_action_pressed("ui_up") or event.is_action_pressed("ui_down"):
 		Global.Rodadas += 1
 		print(Global.Rodadas)
 		var axiy = Input.get_axis("ui_up", "ui_down")
-		pc.position.y += axiy*40
+		pc.position.y += axiy*16

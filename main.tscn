@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://tqnllxqwpra8"]
+[gd_scene load_steps=9 format=3 uid="uid://tqnllxqwpra8"]
 
 [ext_resource type="PackedScene" uid="uid://hlvvp0obu6ig" path="res://sprite/sprite_2d.tscn" id="1_83i6k"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_qtokt"]
@@ -6,31 +6,37 @@
 [ext_resource type="Script" path="res://sprite/sprite_2d.gd" id="3_urfbn"]
 [ext_resource type="Script" path="res://Scripts/label.gd" id="4_nnb6n"]
 [ext_resource type="PackedScene" uid="uid://blti1vqqay5mn" path="res://mundo_proc.tscn" id="5_c6ibl"]
+[ext_resource type="Texture2D" uid="uid://5lb4im6uyixj" path="res://resource/curses_vector_16x24.png" id="5_ul4lb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k83u3"]
+atlas = ExtResource("5_ul4lb")
+region = Rect2(32, 1, 16, 21)
 
 [node name="Player" type="Node2D"]
-position = Vector2(20, 29)
 script = ExtResource("1_qtokt")
 
 [node name="PCMove" type="Node2D" parent="."]
 script = ExtResource("2_d4bkq")
 
 [node name="Mundo_proc" parent="." instance=ExtResource("5_c6ibl")]
-position = Vector2(-27, -31)
+position = Vector2(0, 0)
 
 [node name="PC" parent="." instance=ExtResource("1_83i6k")]
-position = Vector2(0, 0)
+position = Vector2(8, -9)
 scale = Vector2(1, 1)
+texture = SubResource("AtlasTexture_k83u3")
 script = ExtResource("3_urfbn")
 
 [node name="Camera2D" type="Camera2D" parent="PC"]
-position = Vector2(1, 0)
 scale = Vector2(1, 0.999605)
 
 [node name="Control" type="Control" parent="PC/Camera2D"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 28.0
+offset_top = -14.0055
+offset_right = 68.0
+offset_bottom = 25.9945
 
 [node name="CanvasLayer" type="CanvasLayer" parent="PC/Camera2D/Control"]
 
